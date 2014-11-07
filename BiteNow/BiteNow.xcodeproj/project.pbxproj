@@ -16,11 +16,24 @@
 		DC8662791A01BF6C00668B3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC8662771A01BF6C00668B3F /* Main.storyboard */; };
 		DC86627C1A01BF6C00668B3F /* BNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC86627B1A01BF6C00668B3F /* BNViewController.m */; };
 		DC86627E1A01BF6C00668B3F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC86627D1A01BF6C00668B3F /* Images.xcassets */; };
-		DC8662851A01BF6C00668B3F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8662841A01BF6C00668B3F /* XCTest.framework */; };
 		DC8662861A01BF6C00668B3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8662651A01BF6C00668B3F /* Foundation.framework */; };
 		DC8662871A01BF6C00668B3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8662691A01BF6C00668B3F /* UIKit.framework */; };
 		DC86628F1A01BF6C00668B3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC86628D1A01BF6C00668B3F /* InfoPlist.strings */; };
 		DC8662911A01BF6C00668B3F /* BiteNowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8662901A01BF6C00668B3F /* BiteNowTests.m */; };
+		DC86629C1A01CCED00668B3F /* UIImage+BiteNow.m in Sources */ = {isa = PBXBuildFile; fileRef = DC86629B1A01CCED00668B3F /* UIImage+BiteNow.m */; };
+		DC86629F1A01CFB800668B3F /* UIColor+BiteNow.m in Sources */ = {isa = PBXBuildFile; fileRef = DC86629E1A01CFB800668B3F /* UIColor+BiteNow.m */; };
+		DCC04EB91A056AB500BD886F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC04EB81A056AB500BD886F /* Parse.framework */; };
+		DCC04EBB1A056AE100BD886F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC04EBA1A056AE100BD886F /* AudioToolbox.framework */; };
+		DCC04EBD1A056AE800BD886F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC04EBC1A056AE800BD886F /* CFNetwork.framework */; };
+		DCC04EBF1A056AFC00BD886F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC04EBE1A056AFC00BD886F /* libz.dylib */; };
+		DCC04EC11A056B0300BD886F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC04EC01A056B0300BD886F /* MobileCoreServices.framework */; };
+		DCC04EC31A056B0900BD886F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC04EC21A056B0900BD886F /* QuartzCore.framework */; };
+		DCC04EC51A056B1100BD886F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC04EC41A056B1100BD886F /* Security.framework */; };
+		DCC04EC71A056B1900BD886F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC04EC61A056B1900BD886F /* StoreKit.framework */; };
+		DCC04EC91A056B2200BD886F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC04EC81A056B2200BD886F /* SystemConfiguration.framework */; };
+		DCC628BD1A01ED6900F6E477 /* TSCoreMotionListener.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC628BA1A01ED6900F6E477 /* TSCoreMotionListener.m */; };
+		DCC628BE1A01ED6900F6E477 /* TSTapDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC628BC1A01ED6900F6E477 /* TSTapDetector.m */; };
+		DCC628C01A01F02A00F6E477 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC628BF1A01F02A00F6E477 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,10 +62,27 @@
 		DC86627B1A01BF6C00668B3F /* BNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNViewController.m; sourceTree = "<group>"; };
 		DC86627D1A01BF6C00668B3F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DC8662831A01BF6C00668B3F /* BiteNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BiteNowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC8662841A01BF6C00668B3F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DC86628C1A01BF6C00668B3F /* BiteNowTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BiteNowTests-Info.plist"; sourceTree = "<group>"; };
 		DC86628E1A01BF6C00668B3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DC8662901A01BF6C00668B3F /* BiteNowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BiteNowTests.m; sourceTree = "<group>"; };
+		DC86629A1A01CCED00668B3F /* UIImage+BiteNow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BiteNow.h"; sourceTree = "<group>"; };
+		DC86629B1A01CCED00668B3F /* UIImage+BiteNow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BiteNow.m"; sourceTree = "<group>"; };
+		DC86629D1A01CFB800668B3F /* UIColor+BiteNow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BiteNow.h"; sourceTree = "<group>"; };
+		DC86629E1A01CFB800668B3F /* UIColor+BiteNow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BiteNow.m"; sourceTree = "<group>"; };
+		DCC04EB81A056AB500BD886F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		DCC04EBA1A056AE100BD886F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DCC04EBC1A056AE800BD886F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DCC04EBE1A056AFC00BD886F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DCC04EC01A056B0300BD886F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		DCC04EC21A056B0900BD886F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DCC04EC41A056B1100BD886F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DCC04EC61A056B1900BD886F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DCC04EC81A056B2200BD886F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DCC628B91A01ED6900F6E477 /* TSCoreMotionListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSCoreMotionListener.h; path = ../../../TapShare/TapShare/TSCoreMotionListener.h; sourceTree = "<group>"; };
+		DCC628BA1A01ED6900F6E477 /* TSCoreMotionListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSCoreMotionListener.m; path = ../../../TapShare/TapShare/TSCoreMotionListener.m; sourceTree = "<group>"; };
+		DCC628BB1A01ED6900F6E477 /* TSTapDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSTapDetector.h; path = ../../../TapShare/TapShare/TSTapDetector.h; sourceTree = "<group>"; };
+		DCC628BC1A01ED6900F6E477 /* TSTapDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSTapDetector.m; path = ../../../TapShare/TapShare/TSTapDetector.m; sourceTree = "<group>"; };
+		DCC628BF1A01F02A00F6E477 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +90,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC04EC91A056B2200BD886F /* SystemConfiguration.framework in Frameworks */,
+				DCC04EC71A056B1900BD886F /* StoreKit.framework in Frameworks */,
+				DCC04EC51A056B1100BD886F /* Security.framework in Frameworks */,
+				DCC04EC31A056B0900BD886F /* QuartzCore.framework in Frameworks */,
+				DCC04EC11A056B0300BD886F /* MobileCoreServices.framework in Frameworks */,
+				DCC04EBF1A056AFC00BD886F /* libz.dylib in Frameworks */,
 				DC8662681A01BF6C00668B3F /* CoreGraphics.framework in Frameworks */,
+				DCC04EBD1A056AE800BD886F /* CFNetwork.framework in Frameworks */,
+				DCC04EBB1A056AE100BD886F /* AudioToolbox.framework in Frameworks */,
+				DCC628C01A01F02A00F6E477 /* CoreLocation.framework in Frameworks */,
 				DC86626A1A01BF6C00668B3F /* UIKit.framework in Frameworks */,
 				DC8662661A01BF6C00668B3F /* Foundation.framework in Frameworks */,
+				DCC04EB91A056AB500BD886F /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +110,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC8662851A01BF6C00668B3F /* XCTest.framework in Frameworks */,
 				DC8662871A01BF6C00668B3F /* UIKit.framework in Frameworks */,
 				DC8662861A01BF6C00668B3F /* Foundation.framework in Frameworks */,
 			);
@@ -79,6 +118,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC63F7441A800E5400193041 /* Tap Detection */ = {
+			isa = PBXGroup;
+			children = (
+				DCC628B91A01ED6900F6E477 /* TSCoreMotionListener.h */,
+				DCC628BA1A01ED6900F6E477 /* TSCoreMotionListener.m */,
+				DCC628BB1A01ED6900F6E477 /* TSTapDetector.h */,
+				DCC628BC1A01ED6900F6E477 /* TSTapDetector.m */,
+			);
+			name = "Tap Detection";
+			sourceTree = "<group>";
+		};
+		DC63F7451A800E5E00193041 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DC86629D1A01CFB800668B3F /* UIColor+BiteNow.h */,
+				DC86629E1A01CFB800668B3F /* UIColor+BiteNow.m */,
+				DC86629A1A01CCED00668B3F /* UIImage+BiteNow.h */,
+				DC86629B1A01CCED00668B3F /* UIImage+BiteNow.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		DC63F7461A800E6900193041 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC86627A1A01BF6C00668B3F /* BNViewController.h */,
+				DC86627B1A01BF6C00668B3F /* BNViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		DC8662591A01BF6C00668B3F = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +171,19 @@
 		DC8662641A01BF6C00668B3F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCC04EC81A056B2200BD886F /* SystemConfiguration.framework */,
+				DCC04EC61A056B1900BD886F /* StoreKit.framework */,
+				DCC04EC41A056B1100BD886F /* Security.framework */,
+				DCC04EC21A056B0900BD886F /* QuartzCore.framework */,
+				DCC04EC01A056B0300BD886F /* MobileCoreServices.framework */,
+				DCC04EBE1A056AFC00BD886F /* libz.dylib */,
+				DCC04EBC1A056AE800BD886F /* CFNetwork.framework */,
+				DCC04EBA1A056AE100BD886F /* AudioToolbox.framework */,
+				DCC04EB81A056AB500BD886F /* Parse.framework */,
+				DCC628BF1A01F02A00F6E477 /* CoreLocation.framework */,
 				DC8662651A01BF6C00668B3F /* Foundation.framework */,
 				DC8662671A01BF6C00668B3F /* CoreGraphics.framework */,
 				DC8662691A01BF6C00668B3F /* UIKit.framework */,
-				DC8662841A01BF6C00668B3F /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,8 +194,9 @@
 				DC8662741A01BF6C00668B3F /* BNAppDelegate.h */,
 				DC8662751A01BF6C00668B3F /* BNAppDelegate.m */,
 				DC8662771A01BF6C00668B3F /* Main.storyboard */,
-				DC86627A1A01BF6C00668B3F /* BNViewController.h */,
-				DC86627B1A01BF6C00668B3F /* BNViewController.m */,
+				DC63F7461A800E6900193041 /* View Controllers */,
+				DC63F7451A800E5E00193041 /* Categories */,
+				DC63F7441A800E5400193041 /* Tap Detection */,
 				DC86627D1A01BF6C00668B3F /* Images.xcassets */,
 				DC86626C1A01BF6C00668B3F /* Supporting Files */,
 			);
@@ -200,6 +280,14 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Delta Lab";
 				TargetAttributes = {
+					DC8662611A01BF6C00668B3F = {
+						DevelopmentTeam = W4E2C6X642;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					DC8662821A01BF6C00668B3F = {
 						TestTargetID = DC8662611A01BF6C00668B3F;
 					};
@@ -250,9 +338,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC628BD1A01ED6900F6E477 /* TSCoreMotionListener.m in Sources */,
+				DC86629C1A01CCED00668B3F /* UIImage+BiteNow.m in Sources */,
+				DCC628BE1A01ED6900F6E477 /* TSTapDetector.m in Sources */,
 				DC86627C1A01BF6C00668B3F /* BNViewController.m in Sources */,
 				DC8662761A01BF6C00668B3F /* BNAppDelegate.m in Sources */,
 				DC8662721A01BF6C00668B3F /* main.m in Sources */,
+				DC86629F1A01CFB800668B3F /* UIColor+BiteNow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +428,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "a684a7dc-008e-48d8-a1cb-9c87dc6be3e3";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -367,6 +460,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PROVISIONING_PROFILE = "a684a7dc-008e-48d8-a1cb-9c87dc6be3e3";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -377,10 +471,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BiteNow/BiteNow-Prefix.pch";
 				INFOPLIST_FILE = "BiteNow/BiteNow-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -390,10 +490,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BiteNow/BiteNow-Prefix.pch";
 				INFOPLIST_FILE = "BiteNow/BiteNow-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -457,6 +563,7 @@
 				DC8662961A01BF6C00668B3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC8662971A01BF6C00668B3F /* Build configuration list for PBXNativeTarget "BiteNowTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +572,7 @@
 				DC8662991A01BF6C00668B3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

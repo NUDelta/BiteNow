@@ -6,8 +6,13 @@
 //  Copyright (c) 2014 Delta Lab. All rights reserved.
 //
 
+#import "BNAppDelegate.h"
+#import "TSTapDetector.h"
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import <CoreLocation/CoreLocation.h>
+#import <Parse/Parse.h>
 
-@interface BNViewController : UIViewController
+@interface BNViewController : UIViewController <UIAlertViewDelegate, KnockDetectorDelegate, CLLocationManagerDelegate>
 
 @end

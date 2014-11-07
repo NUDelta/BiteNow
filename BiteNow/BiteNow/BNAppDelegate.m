@@ -12,8 +12,99 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [Parse setApplicationId:@"WqcccQ2PuWTgbijSnafJlJrtHH6ca8OnGR7lH5Oy"
+                  clientKey:@"6itJjF0AgLOUzVOW0YzAz3JPJMQmKiLlWp9IlNHG"];
+    [self registerForNotifications:application];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"])
+    {
+        // app already launched
+        self.firstLaunch = NO;
+    }
+    else
+    {
+        PFUser *currentUser = [PFUser user];
+        NSString *UUID = [[NSUUID UUID] UUIDString];
+        [currentUser setUsername:UUID];
+        [currentUser setPassword:@""];
+        [currentUser setObject:@"Food" forKey:@"notificationSelection"];
+        [currentUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                [[PFInstallation currentInstallation] setObject:[PFUser currentUser] forKey:@"user"];
+                [[PFInstallation currentInstallation] saveInBackground];
+            }
+        }];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        // This is the first launch ever
+        self.firstLaunch = YES;
+    }
     return YES;
+}
+
+-(void)registerForNotifications:(UIApplication *)application
+{
+    // Register for Push Notifications, if running iOS 8
+    if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        // set up for camera button category
+        UIMutableUserNotificationAction *pictureAction = [[UIMutableUserNotificationAction alloc] init];
+        pictureAction.identifier = @"PICTURE_ID";
+        pictureAction.title = @"Take a picture";
+        pictureAction.destructive = NO;
+        pictureAction.authenticationRequired = NO;
+        pictureAction.activationMode = UIUserNotificationActivationModeBackground;
+        UIMutableUserNotificationCategory *pictureCategory = [[UIMutableUserNotificationCategory alloc] init];
+        [pictureCategory setActions:@[pictureAction] forContext:UIUserNotificationActionContextDefault];
+        [pictureCategory setActions:@[pictureAction] forContext:UIUserNotificationActionContextMinimal];
+        pictureCategory.identifier = @"PICTURE_CATEGORY";
+        
+        UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                        UIUserNotificationTypeBadge |
+                                                        UIUserNotificationTypeSound);
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                                 categories:[NSSet setWithArray:@[pictureCategory]]];
+        [application registerUserNotificationSettings:settings];
+        [application registerForRemoteNotifications];
+    } else {
+        // Register for Push Notifications before iOS 8
+        [application registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                         UIRemoteNotificationTypeAlert |
+                                                         UIRemoteNotificationTypeSound)];
+    }   
+}
+
+-(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)())completionHandler
+{
+    if ([identifier isEqualToString:@"PICTURE_ID"]) {
+        
+    }
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    currentInstallation.channels = @[ @"global" ];
+    [currentInstallation saveInBackground];
+}
+
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    [PFPush handlePush:userInfo];
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+}
+
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
+}
+
+-(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void (^)())completionHandler
+{
+    
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -24,8 +115,10 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    UIBackgroundTaskIdentifier bgTask = 0;
+    bgTask = [application beginBackgroundTaskWithExpirationHandler:^{
+        NSLog(@"asdfadfasfs");
+    }];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
